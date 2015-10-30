@@ -5,6 +5,8 @@ app.service('mainService', function($http){
         return $http({'method': 'JSONP', 'url': 'https://itunes.apple.com/search?term=' + artist + '&callback=JSON_CALLBACK' })
             .then(function (data) {
                 return data;
+            }, function(error){
+                throw error;
             });
     };
 })

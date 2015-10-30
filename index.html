@@ -8,19 +8,21 @@
 <div>
 <h2>pending</h2>
 	<form>
-		<input ng-model="query" placeholder="Search"/>
-		<button ng-click="getData()">Submit</button> 
+		<input ng-model="query" placeholder="Search Artist"/>
+		<button request="getData()" pending>Submit</button> 
 	</form>
 </div>
-
+    
 <div>
 <h2>Notifications</h2>
-	<form>
-		<input ng-model="title" placeholder="title"/>
-		<input ng-model="body" placeholder="body"/>
-		<input ng-model="icon" placeholder="iconUrl"/>
-		<button ng-click="">Submit</button> 
+	<form >
+        
+		<input ng-model="title" placeholder="title" title/>
+		<input ng-model="body" placeholder="body" body/>
+		<input ng-model="icon" placeholder="iconUrl" icon/>
+		<button notify title="title" body="body" icon="icon">Submit</button> 
 	</form>
+    
 </div>
 
 <scripts>
@@ -33,3 +35,4 @@
 
 </body>
 </html>
+
